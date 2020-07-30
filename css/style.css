@@ -7,6 +7,7 @@
 	--font-brown: #ae8f72;
 	--background: #e8f6f7;
 	--button: #004e59;
+	--logo: #7aa9ab;
 }
 
 /* Global */
@@ -22,21 +23,38 @@ body {
 
 .header {
 	width: 100%;
-	height: 300px;
+	height: 350px;
 	background: url(../img/7.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.header-nav {
+.nav-container {
+	width: 100%;
+	position: fixed;
+	background: linear-gradient(to bottom, #004e59, rgba(0,78,89,0.8));
+}
+
+.nav-wrapper {
+	max-width: 1170px;
 	margin: 0 auto;
-	width: 50%;
-	padding: 70px 0;
+	padding: 0 15px;
+	height: 96px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 200px;
+	height: 96px;
+}
+
+.header-nav {
 }
 
 .header-nav-item {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
 	text-align: center;
 	list-style: none;
 	margin: 0;
@@ -46,29 +64,36 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 24px;
+	line-height: 93px;
 	color: var(--white);
 	padding: 0 10px;
 }
 
 .header-nav-item a:hover {
-	text-decoration: underline;
+	color: var(--logo);
 }
 
 .telephone {
-	position: fixed;
-	top: 60px;
-	right: 30px;
-	padding: 10px 20px;
 	color: var(--white);
-	background: rgba(0,78,89,0.7);
 	font-size: 24px;
+	line-height: 93px;
 	text-decoration: none;
-	z-index: 5;
+}
+
+.telephone:hover {
+	color: var(--logo);
 }
 
 /* Main */
 
+.room-wrapper {
+	width: 100%;
+	background-color: var(--background);
+}
+
 .room {
+	max-width: 1170px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -98,6 +123,7 @@ body {
 	padding: 30px 0;
 }
 
+.two-room,
 .four-room {
 	background-color: var(--white);
 }
