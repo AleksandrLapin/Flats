@@ -32,7 +32,7 @@ body {
 .nav-container {
 	width: 100%;
 	position: fixed;
-	background: linear-gradient(to bottom, #004e59, rgba(0,78,89,0.8));
+	background: linear-gradient(#004e59, rgba(0,78,89,0.7));
 }
 
 .nav-wrapper {
@@ -42,6 +42,7 @@ body {
 	height: 96px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .logo {
@@ -64,7 +65,6 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 24px;
-	line-height: 93px;
 	color: var(--white);
 	padding: 0 10px;
 }
@@ -76,7 +76,6 @@ body {
 .telephone {
 	color: var(--white);
 	font-size: 24px;
-	line-height: 93px;
 	text-decoration: none;
 }
 
@@ -95,32 +94,103 @@ body {
 	max-width: 1170px;
 	margin: 0 auto;
 	display: flex;
+	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 	background-color: var(--background);
 }
 
+.choice-scheme input {
+	display: none;
+}
+
+.choice-scheme {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+	flex-grow: 2;
+	padding-left: 15px;
+}
+
+.option-wrap {
+	width: 100%;
+}
+
+.option-1,
+.option-2,
+.option-3,
+.option-4 {
+	display: none;
+}
+
+.choice-1:checked ~ .option-wrap .option-1,
+.choice-2:checked ~ .option-wrap .option-2,
+.choice-3:checked ~ .option-wrap .option-3,
+.choice-4:checked ~ .option-wrap .option-4 {
+	display: block;
+	display: flex;
+	justify-content: space-between;
+}
+
+.choice-1:checked ~ .choice-button .k35,
+.choice-2:checked ~ .choice-button .k40,
+.choice-3:checked ~ .choice-button .k43,
+.choice-4:checked ~ .choice-button .k56 {
+	border: 2px solid var(--font-brown);
+	padding: 8px 18px;
+}
+
+.choice-button label {
+	padding: 10px 20px;
+	margin: 0 5px;
+	background-color: var(--white);
+	border-radius: 7px;
+	color: var(--font-brown);
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.choice-button label:hover {
+	background-color: var(--font-brown);
+	color: var(--white);
+}
+
+.choice-button {
+	margin-right: 40px;
+}
+
 .namber {
 	font-weight: 300;
 	font-size: 35px;
+	margin: 0;
+}
+
+.namber-article {
+	margin: 0;
 }
 
 .room-title {
 	font-weight: 300;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .room-article,
 .price-meter {
 	color: var(--font-brown);
+	margin: 0;
 }
 
 .price {
 	font-weight: 400;
 	font-size: 24px;
+	margin: 0;
 }
 
 .room-article {
-	padding: 30px 0;
+	padding: 35px 0;
 }
 
 .two-room,
