@@ -5,6 +5,7 @@
 	--font-white: #FFFFFF;
 	--font-black: #000000;
 	--font-brown: #ae8f72;
+	--batton-brown: #ccb39c;
 	--background: #e8f6f7;
 	--button: #004e59;
 	--logo: #7aa9ab;
@@ -85,6 +86,34 @@ body {
 
 /* Main */
 
+.title {
+	max-width: 960px;
+	padding: 0 15px;
+	margin: 70px auto;
+}
+
+.title h1 {
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--button);
+}
+
+.title p {
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--font-brown);
+}
+
+.title-one-room {
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--button);
+	margin: 40px auto;
+}
+
 .room-wrapper {
 	width: 100%;
 	background-color: var(--background);
@@ -98,6 +127,48 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	background-color: var(--background);
+}
+
+.main-room {
+	max-width: 1170px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--background);
+}
+
+.main-room p {
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--button);
+}
+
+.main-room ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0;
+	margin-bottom: 50px;
+}
+
+.main-room li {
+	list-style: none;
+}
+
+.main-room a {
+	padding: 8px 18px;
+	margin: 0 5px;
+	background-color: var(--white);
+	border: 1px solid var(--font-brown);
+	border-radius: 7px;
+	color: var(--font-brown);
+	box-sizing: border-box;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .choice-scheme input {
@@ -128,7 +199,6 @@ body {
 .choice-2:checked ~ .option-wrap .option-2,
 .choice-3:checked ~ .option-wrap .option-3,
 .choice-4:checked ~ .option-wrap .option-4 {
-	display: block;
 	display: flex;
 	justify-content: space-between;
 }
@@ -137,14 +207,15 @@ body {
 .choice-2:checked ~ .choice-button .k40,
 .choice-3:checked ~ .choice-button .k43,
 .choice-4:checked ~ .choice-button .k56 {
-	border: 2px solid var(--font-brown);
-	padding: 8px 18px;
+	background-color: var(--font-brown);
+	color: var(--white);
 }
 
 .choice-button label {
-	padding: 10px 20px;
+	padding: 8px 18px;
 	margin: 0 5px;
 	background-color: var(--white);
+	border: 1px solid var(--font-brown);
 	border-radius: 7px;
 	color: var(--font-brown);
 	box-sizing: border-box;
@@ -152,8 +223,9 @@ body {
 }
 
 .choice-button label:hover {
-	background-color: var(--font-brown);
+	background-color: var(--batton-brown);
 	color: var(--white);
+	border: 1px solid var(--batton-brown);
 }
 
 .choice-button {
@@ -193,16 +265,11 @@ body {
 	padding: 35px 0;
 }
 
-.two-room,
-.four-room {
-	background-color: var(--white);
-}
-
 /* Footer */
 
 .footer {
 	width: 100%;
-	background-color: var(--background);
+	background: linear-gradient(rgba(0,78,89,0.7), #004e59);
 
 }
 
@@ -212,6 +279,19 @@ body {
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+}
+
+.title-footer,
+.address,
+.contacts a {
+	color: var(--white);
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+
 }
 
 /* Modal */
