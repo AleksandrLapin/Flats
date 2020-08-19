@@ -57,6 +57,7 @@ body {
 .header-nav-item {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	text-align: center;
 	list-style: none;
 	margin: 0;
@@ -124,7 +125,7 @@ body {
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	background-color: var(--background);
 }
@@ -148,6 +149,7 @@ body {
 
 .main-room ul {
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
@@ -157,6 +159,7 @@ body {
 
 .main-room li {
 	list-style: none;
+	margin: 10px 0;
 }
 
 .main-room a {
@@ -182,10 +185,6 @@ body {
 	color: var(--white);
 }
 
-.main-room img {
-	margin: 50px 0 0;
-}
-
 .choice-scheme input {
 	display: none;
 }
@@ -205,6 +204,8 @@ body {
 
 .scheme {
 	margin: 30px 0;
+	width: 100%;
+	max-width: 500px;
 }
 
 .option-1,
@@ -219,7 +220,8 @@ body {
 .choice-3:checked ~ .option-wrap .option-3,
 .choice-4:checked ~ .option-wrap .option-4 {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .choice-1:checked ~ .choice-button .k35,
@@ -228,6 +230,10 @@ body {
 .choice-4:checked ~ .choice-button .k56 {
 	background-color: var(--font-brown);
 	color: var(--white);
+}
+
+.room img {
+
 }
 
 .choice-button label {
@@ -263,6 +269,7 @@ body {
 
 .room-title {
 	font-weight: 300;
+	flex-basis: 170px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -282,6 +289,12 @@ body {
 
 .room-article {
 	padding: 35px 0;
+}
+
+@media (max-width: 768px) {
+	.room {
+		flex-wrap: wrap;
+	}
 }
 
 /* Footer */
