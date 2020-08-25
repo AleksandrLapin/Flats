@@ -107,12 +107,33 @@ body {
 	color: var(--font-brown);
 }
 
+.gallery-wrapper {
+
+}
+
+.gallery {
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-rows: repeat(3, 180px);
+    grid-template-columns: repeat(3, 33.33%);
+    overflow: hidden;
+}
+
+.gallery-item img {
+	width: 100%;
+	min-width: 360px;
+	height: auto;
+	border: 5px solid var(--white);
+}
+
 .title-one-room {
 	font-size: 24px;
 	text-transform: uppercase;
 	text-align: center;
 	color: var(--button);
 	margin: 40px auto;
+	padding: 0 15px;
 }
 
 .room-wrapper {
@@ -133,6 +154,7 @@ body {
 .main-room {
 	max-width: 1170px;
 	margin: 0 auto;
+	padding-top: 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
