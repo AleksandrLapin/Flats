@@ -118,9 +118,11 @@ body {
 	grid-template-rows: repeat(3, 180px);
     grid-template-columns: repeat(3, 33.33%);
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .gallery-item img {
+	display: block;
 	width: 100%;
 	min-width: 360px;
 	height: auto;
@@ -225,9 +227,10 @@ body {
 
 .scheme {
 	margin: 30px 0;
-	width: 100%;
+	width: auto;
 	max-width: 600px;
-	height: 100%;
+	height: auto;
+	max-height: 420px;
 }
 
 .option-1,
