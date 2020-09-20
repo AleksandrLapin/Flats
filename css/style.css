@@ -218,7 +218,6 @@ body {
 	flex-wrap: wrap;
 	margin-bottom: 50px;
 	flex-grow: 2;
-	padding-left: 15px;
 }
 
 .option-wrap {
@@ -227,9 +226,9 @@ body {
 
 .scheme {
 	margin: 30px 0;
-	width: auto;
+	width: 100%;
 	max-width: 600px;
-	height: auto;
+	height: 100%;
 	max-height: 420px;
 }
 
@@ -247,6 +246,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 .choice-1:checked ~ .choice-button .k35,
@@ -255,10 +255,6 @@ body {
 .choice-4:checked ~ .choice-button .k56 {
 	background-color: var(--font-brown);
 	color: var(--white);
-}
-
-.room img {
-
 }
 
 .choice-button label {
@@ -370,15 +366,4 @@ body {
 .contacts {
 	display: flex;
 	flex-direction: column;
-
-}
-
-/* Modal */
-
-.modal-map {
-	display: none;
-}
-
-.modal-form {
-	display: none;
 }
