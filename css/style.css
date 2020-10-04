@@ -214,7 +214,7 @@ body {
 
 .choice-scheme {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	margin-bottom: 50px;
 	flex-grow: 2;
@@ -226,7 +226,7 @@ body {
 
 .scheme {
 	margin: 30px 0;
-	width: 100%;
+	width: auto;
 	max-width: 600px;
 	height: 100%;
 	max-height: 420px;
@@ -278,7 +278,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin:0 40px 0 0;
 }
 
 .namber {
